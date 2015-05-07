@@ -1,10 +1,11 @@
 $:.push File.expand_path('../lib', __FILE__)
-version = File.read(File.expand_path('../VERSION', __FILE__)).strip
+
+require 'openproject_test/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'openproject_test'
-  s.version     = version
+  s.version     = OpenprojectTest::VERSION
   s.authors     = ['Florian Kraft']
   s.email       = ['FlorianKraft@gmx.de']
   s.homepage    = 'https://github.com/floriank/openproject_test'
@@ -13,10 +14,10 @@ Gem::Specification.new do |s|
                      generators for various purposes during plugin development
                     }.split.join ' '
 
-  s.files = Dir['{lib}/**/*'] + ['LICENSE.txt', 'Rakefile', 'README.md']
+  s.files = Dir['{bin,lib}/**/*'] + ['LICENSE.txt', 'Rakefile', 'README.md']
 
 
-  s.bindir        = 'bin'
+  s.bindir        = 'bin/'
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
 
 
