@@ -7,4 +7,3 @@ namespace :openproject_test do
     end
   end
 end
-

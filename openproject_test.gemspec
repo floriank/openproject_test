@@ -16,10 +16,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{bin,lib}/**/*'] + ['LICENSE.txt', 'Rakefile', 'README.md']
 
-
   s.bindir        = 'bin/'
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
-
 
   s.add_dependency 'rails', '~> 3.2.21'
   s.add_dependency 'rubocop', '~> 0.28'
