@@ -13,11 +13,26 @@ end
 ```
 And then execute:
 
-    $ bundle
+```
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install openproject_test
+```
+gem install openproject_test
+```
+
+## Usage
+
+The gem provides `op_test` as a commandline tool.
+
+```
+op_test install
+```
+
+will install a fresh copy of OpenProject as a spec dummy for your tests to run against.
+
 
 ## Contributing
 
